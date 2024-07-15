@@ -51,3 +51,12 @@ resource "azurerm_dns_a_record" "jenkins" {
   ttl                 = 30
   records             = ["135.237.50.218"]
 }
+
+resource "azurerm_dns_a_record" "gitea" {
+  name                = "gitea"
+  depends_on = [azurerm_dns_zone.home-lab-aks-public]
+  zone_name           = azurerm_dns_zone.home-lab-aks-public.name
+  resource_group_name = azurerm_resource_group.home-lab-aks.name
+  ttl                 = 30
+  records             = ["135.237.50.218"]
+}
