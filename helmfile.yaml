@@ -4,7 +4,7 @@ repositories:
  - name: jenkins
    url:  https://charts.jenkins.io 
  - name: gitea
-   url:  https://dl.gitea.com/charts/
+   url: https://dl.gitea.com/charts/
 
 releases:
 
